@@ -2325,6 +2325,7 @@ static void ds_show_flags(RDisasmState *ds) {
 				case_prev = case_current;
 				ds_align_comment (ds);
 				r_cons_printf ("%s; from %s", ds->show_color ? ds->pal_comment : "", addr);
+				outline  =  false;
 			} else {
 				const char *lang = r_config_get (core->config, "bin.lang");
 				char *name = r_bin_demangle (core->bin->cur, lang, flag->realname, flag->offset, keep_lib);
